@@ -5,7 +5,7 @@ class Program
     static void Main(string[] args)
     {
         Journal theJournal = new Journal();
-        PromptGenerator _promptGen = new PromptGenerator();
+        PromptGenerator promptGen = new PromptGenerator();
         bool _running = true;
 
         Console.WriteLine("Welcome to the Journal Program!");
@@ -20,17 +20,17 @@ class Program
             Console.WriteLine("5. Exit");
 
             Console.Write("What would you like to do? ");
-            string _choice = Console.ReadLine();
+            string choice = Console.ReadLine();
 
-            switch (_choice)
+            switch (choice)
             {
                 case "1":
                     //Write a new journal entry
-                    string _prompt = _promptGen.GetRandomPrompt(); //Show a random prompt
-                    Console.WriteLine(_prompt);
+                    string prompt = promptGen.GetRandomPrompt(); //Show a random prompt
+                    Console.WriteLine(prompt);
                     Console.WriteLine("Please write your entry below:");
                     //Add the new entry to the journal with the current date
-                    theJournal.AddEntry(new Entry(DateTime.Now.ToString("yyyy-MM-dd"), _prompt, Console.ReadLine()));
+                    theJournal.AddEntry(new Entry(DateTime.Now.ToString("yyyy-MM-dd"), prompt, Console.ReadLine()));
                     Console.WriteLine("Entry added!");
                     break;
                 case "2":
