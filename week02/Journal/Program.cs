@@ -1,5 +1,7 @@
 using System;
 
+//Added feature: Improved process for loading and saving journal entries as .csv
+
 class Program
 {
     static void Main(string[] args)
@@ -9,7 +11,7 @@ class Program
         bool _running = true;
 
         Console.WriteLine("Welcome to the Journal Program!");
-        
+
         while (_running)
         {
             Console.WriteLine("Please select one of the following choices:");
