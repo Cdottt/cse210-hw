@@ -4,7 +4,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        Journal _journal = new Journal();
+        Journal theJournal = new Journal();
         PromptGenerator _promptGen = new PromptGenerator();
         bool _running = true;
 
@@ -25,36 +25,35 @@ class Program
             switch (_choice)
             {
                 case "1":
-                    // Write a new journal entry
-                    //Show a random prompt
-                    string _prompt = _promptGen.GetRandomPrompt();
+                    //Write a new journal entry
+                    string _prompt = _promptGen.GetRandomPrompt(); //Show a random prompt
                     Console.WriteLine(_prompt);
                     Console.WriteLine("Please write your entry below:");
-                    // Add the new entry to the journal with the current date
-                    _journal.AddEntry(new Entry(DateTime.Now.ToString("yyyy-MM-dd"), _prompt, Console.ReadLine()));
+                    //Add the new entry to the journal with the current date
+                    theJournal.AddEntry(new Entry(DateTime.Now.ToString("yyyy-MM-dd"), _prompt, Console.ReadLine()));
                     Console.WriteLine("Entry added!");
                     break;
                 case "2":
-                    // Display all journal entries
-                    _journal.DisplayAll();
+                    //Display all journal entries
+                    theJournal.DisplayAll();
                     break;
                 case "3":
-                    // Load journal entries from a file
+                    //Load journal entries from a file
                     Console.WriteLine("Enter the filename to load from (ex. journal):");
                     string _loadFilename = Console.ReadLine();
-                    _journal.LoadFromFile(_loadFilename);
+                    theJournal.LoadFromFile(_loadFilename);
                     break;
                 case "4":
-                    // Save journal entries to a file
+                    //Save journal entries to a file
                     Console.WriteLine("Enter the filename to save to (ex. journal):");
                     string _saveFilename = Console.ReadLine();
-                    _journal.SaveToFile(_saveFilename);
+                    theJournal.SaveToFile(_saveFilename);
                     break;
                 case "5":
                     _running = false;
                     break;
                 default:
-                    //if the user enters an invalid choice
+                    //If the user enters an invalid choice
                     Console.WriteLine("Invalid choice. Please try again.");
                     break;
             }
