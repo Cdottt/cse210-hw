@@ -41,5 +41,4 @@ public class Video
 
         Console.WriteLine(); //Space between videos
     }
-
 }
