@@ -5,10 +5,10 @@ class Program
 {
     static void Main(string[] args)
     {
-        // Exceeds requirement: Used Prompt Tracker implemented in ReflectingActivity and ListingActivity
         /*
          EXCEEDS REQUIREMENTS:
-         This program ensures no reflection or listing prompt/question repeats until all items have been used at least once
+
+         Added feature to ensure no prompt in ReflectingActivity repeats until all items have been used at least once
          during the session. This provides better variety and more meaningful reflections.
         */
 
