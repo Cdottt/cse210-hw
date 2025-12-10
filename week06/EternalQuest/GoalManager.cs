@@ -287,11 +287,9 @@ public class GoalManager
                     {
                         // Expected format: SimpleGoal|name|description|points|isComplete
                         var g = new SimpleGoal(parts[1], parts[2], int.Parse(parts[3]));
-                        // parse isComplete if present
+                        
                         if (parts.Length > 4 && bool.TryParse(parts[4], out bool isComplete) && isComplete)
                         {
-                            // mark complete - we need to set private field; safe approach: call RecordEvent if not complete
-                            // but RecordEvent in SimpleGoal marks it complete and prints; to avoid printing we can set via reflection
                             typeof(SimpleGoal)
                                 .GetField("_isComplete", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance)
                                 .SetValue(g, true);
