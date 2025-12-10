@@ -9,7 +9,7 @@ class Program
          EXCEEDS REQUIREMENTS:
 
          Added feature to ensure no prompt in ReflectingActivity repeats until all items have been used at least once
-         during the session. This provides better variety and more meaningful reflections.
+         during the session.
         */
 
         List<Activity> activities = new List<Activity>()
