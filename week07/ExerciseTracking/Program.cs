@@ -6,8 +6,8 @@ class Program
     {
         List<Activity> activities = new List<Activity>();
 
-        activities.Add(new Running("11 Dec 2025", 30, 3.0));
-        activities.Add(new Cycling("11 Dec 2025", 30, 12.0));
+        activities.Add(new Running("11 Dec 2025", 40, 21));
+        activities.Add(new Cycling("11 Dec 2025", 240, 15, 100));
         activities.Add(new Swimming("11 Dec 2025", 30, 40));
 
         foreach (Activity a in activities)

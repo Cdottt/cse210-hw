@@ -3,8 +3,9 @@ using System;
 public class Running : Activity
 {
     private double _distance; // miles
+    private int _laps;
 
-    public Running(string date, int minutes, double distance)
+    public Running(string date, int minutes, int distance)
         : base(date, minutes)
     {
         _distance = distance;
